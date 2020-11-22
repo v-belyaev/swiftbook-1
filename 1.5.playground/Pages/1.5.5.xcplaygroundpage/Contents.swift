@@ -43,11 +43,11 @@ func getArrayOfFibonacciWithRecursion(from length: Int) -> [Int]? {
     }
     
     // Уже знаем что length меньше нуля не будет, посему force unwrap 😈
-    let arrayOfFibonacci = getArrayOfFibonacciWithRecursion(from: length - 1)! + getArrayOfFibonacciWithRecursion(from: length - 2)!
+    let arrayOfFibonacci = getArrayOfFibonacciWithRecursion(from: length - 2)!.ins getArrayOfFibonacciWithRecursion(from: length - 1)!
     return arrayOfFibonacci
 }
 
 let arrayOfFibonacci = getArrayOfFibonacci(from: 4)
-let arrayOfFibonacciFromRecursion = getArrayOfFibonacci(from: 6)
+let arrayOfFibonacciFromRecursion = getArrayOfFibonacciWithRecursion(from: 6)
 
 //: [Next](@next)
